@@ -54,7 +54,7 @@ router.get('/signup', isLoggedIn, (req, res) => {
     res.render('users/signup', {
         title: 'Sign up',
         breadcrumbs: false,
-        layout: 'signin'
+        layout: '../layouts/signin'
     })
 });
 

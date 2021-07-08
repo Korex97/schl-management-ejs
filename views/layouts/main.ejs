@@ -19,24 +19,24 @@
 
 <body>
     <div id="wrapper">
-        <%- include("partials/_sidebar") %>
-        <%- include("partials/_nav") %>
+        <%- include("../partials/_sidebar") %>
+        <%- include("../partials/_nav") %>
         <div id="page-content-wrapper">
             <section style="width:100%;height:70px;padding:11px;margin-top:0px;margin-bottom:10px;">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-3">
-                            <%- include("partials/_breadcrumbs") %
+                            <%- include("../partials/_breadcrumbs") %
                         </div>
                         <div class="col-md-9">
-                            <%- include("partials/_search-bar") %>
+                            <%- include("../partials/_search-bar") %>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <%- include("partials/_msg") %>
-            <%- include("partials/_error") %>
+            <%- include("../partials/_msg") %>
+            <%- include("../partials/_error") %>
 
             <%- body %>
         </div>
