@@ -110,14 +110,20 @@ app.get('/', [isLoggedIn], (req, res) => {
 });
 
 // Dashboard Route
-app.get('/dashboard', [ensureAuthenticated], (req, res) => {
+// app.get('/dashboard', [ensureAuthenticated], (req, res) => {
+//     //console.log(req.originalUrl);
+//     res.render('dashboard', {
+//         title: 'Dashboard',
+//         breadcrumbs: true
+//     });
+// });
+app.get('/dashboard', (req, res) => {
     //console.log(req.originalUrl);
     res.render('dashboard', {
         title: 'Dashboard',
         breadcrumbs: true
     });
 });
-
 app.get('/api', (req, res) => {
     res.render('api');
 })
