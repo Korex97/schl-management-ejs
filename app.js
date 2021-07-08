@@ -148,7 +148,7 @@ app.use(function(req, res, next) {
   
     // render the error page
     res.status(err.status || 500);
-        res.json(err);
+        res.json('errors');
     });
 
 app.listen(port, () => console.info(`Listening to port ${port}`));
