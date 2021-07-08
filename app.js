@@ -117,13 +117,6 @@ app.get('/', [isLoggedIn], (req, res) => {
 //         breadcrumbs: true
 //     });
 // });
-app.get('/dashboard', (req, res) => {
-    //console.log(req.originalUrl);
-    res.render('dashboard', {
-        title: 'Dashboard',
-        breadcrumbs: true
-    });
-});
 app.get('/api', (req, res) => {
     res.render('api');
 })
@@ -155,7 +148,7 @@ app.use(function(req, res, next) {
   
     // render the error page
     res.status(err.status || 500);
-        res.render('errors');
+        res.json(err);
     });
 
 app.listen(port, () => console.info(`Listening to port ${port}`));
