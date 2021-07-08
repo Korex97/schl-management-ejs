@@ -28,7 +28,7 @@ router.get('/signin', isLoggedIn, (req, res) => {
     res.render('users/signin', {
         title: 'Please Sign in',
         breadcrumbs: false,
-        layout: './layouts/signin'
+        layout: '../layouts/signin'
     });
 });
 
