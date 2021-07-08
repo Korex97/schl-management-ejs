@@ -25,7 +25,7 @@ const {
 
 // GET Signin Route.
 router.get('/signin', isLoggedIn, (req, res) => {
-    res.render('home', {
+    res.render('users/signin', {
         title: 'Please Sign in',
         breadcrumbs: false,
         layout: 'signin'
