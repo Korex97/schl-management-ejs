@@ -55,17 +55,6 @@ const {
     isLoggedIn
 } = require('./helpers/auth');
 
-// Express Handlebars Middleware.
-
-// app.engine('handlebars', exphbs({
-//     defaultLayout: 'main',
-//     helpers: {
-//         paginate: paginate,
-//         select: select,
-//         if_eq: if_eq,
-//         select_course: select_course
-//     }
-// }));
 
 app.use(expressLayouts);
 app.set("layout", "./layouts/main")
@@ -116,7 +105,7 @@ app.get('/', [isLoggedIn], (req, res) => {
     res.render('home', {
         title: 'Welcome',
         breadcrumbs: false,
-        layout: 'home'
+        layout: './layouts/home'
     });
 });
 
